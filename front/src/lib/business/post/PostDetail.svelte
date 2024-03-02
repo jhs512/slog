@@ -76,6 +76,25 @@
       hotkeys.deleteScope('postDetail');
     };
   });
+
+  rq.effect(() => {
+    const hash = window.location.hash;
+
+    if (hash) {
+      toastUiEditor.toggleFullScreen();
+    }
+
+    setTimeout(() => {
+      const hash = window.location.hash;
+      if (hash) {
+        const id = decodeURI(hash.substring(1).replaceAll(' ', '-'));
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView();
+        }
+      }
+    }, 200);
+  });
 </script>
 
 <div class="flex-grow flex justify-center items-center">

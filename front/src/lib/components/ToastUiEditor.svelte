@@ -128,6 +128,20 @@
       return { toHTMLRenderers };
     }
 
+    function pptPlugin() {
+      const toHTMLRenderers = {
+        ppt(node: any) {
+          return [
+            { type: 'openTag', tagName: 'div', outerNewLine: true },
+            { type: 'html', content: '' },
+            { type: 'closeTag', tagName: 'div', outerNewLine: true }
+          ];
+        }
+      };
+
+      return { toHTMLRenderers };
+    }
+
     function youtubePlugin() {
       const toHTMLRenderers = {
         youtube(node: any) {
@@ -266,6 +280,7 @@
         [uml, umlOptions],
         configPlugin,
         hidePlugin,
+        pptPlugin,
         youtubePlugin,
         codepenPlugin
       ],
@@ -275,7 +290,7 @@
             type: entering ? 'openTag' : 'closeTag',
             tagName: `h${node.level}`,
             attributes: {
-              id: getChildrenText(node).trim()
+              id: getChildrenText(node).trim().replaceAll(' ', '-')
             }
           };
         },
