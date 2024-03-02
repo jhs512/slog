@@ -87,7 +87,7 @@
     setTimeout(() => {
       const hash = window.location.hash;
       if (hash) {
-        const id = decodeURI(hash.substring(1).replaceAll(' ', '-'));
+        const id = decodeURI(hash.substring(1)).replaceAll(' ', '-');
         const element = document.getElementById(id);
         if (element) {
           element.scrollIntoView();
