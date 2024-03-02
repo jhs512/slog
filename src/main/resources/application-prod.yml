@@ -7,7 +7,7 @@ spring:
       max-file-size: 5MB
       max-request-size: 5MB
   datasource:
-    url: jdbc:postgresql://jhs512-slog-db.internal:5432/slog_prod
+    url: jdbc:postgresql://jhs512-common-1-db.internal:5432/slog_prod
     username: postgres
     password: ${custom.prod.database.password}
     driver-class-name: org.postgresql.Driver
