@@ -56,7 +56,7 @@
   rq.effect(() => {
     const hash = window.location.hash;
 
-    if (hash) {
+    setTimeout(() => {
       const hash = window.location.hash;
       if (hash) {
         const id = decodeURI(hash.substring(1)).replaceAll(' ', '-');
@@ -65,7 +65,7 @@
           toastUiEditor.toggleFullScreen();
         }
       }
-    }
+    }, 150);
 
     setTimeout(() => {
       const hash = window.location.hash;
