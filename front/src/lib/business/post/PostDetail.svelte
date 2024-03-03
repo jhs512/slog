@@ -54,20 +54,18 @@
   }
 
   rq.effect(() => {
-    const hash = window.location.hash;
-
     setTimeout(() => {
       const hash = window.location.hash;
-      if (hash) {
+      if (hash === '#f') {
+        toastUiEditor.toggleFullScreen();
+      } else if (hash) {
         const id = decodeURI(hash.substring(1)).replaceAll(' ', '-');
         const element = document.getElementById(id);
         if (element) {
           toastUiEditor.toggleFullScreen();
         }
-      } else if (hash === '#full') {
-        toastUiEditor.toggleFullScreen();
       }
-    }, 150);
+    }, 100);
 
     setTimeout(() => {
       const hash = window.location.hash;
