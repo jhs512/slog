@@ -57,7 +57,14 @@
     const hash = window.location.hash;
 
     if (hash) {
-      toastUiEditor.toggleFullScreen();
+      const hash = window.location.hash;
+      if (hash) {
+        const id = decodeURI(hash.substring(1)).replaceAll(' ', '-');
+        const element = document.getElementById(id);
+        if (element) {
+          toastUiEditor.toggleFullScreen();
+        }
+      }
     }
 
     setTimeout(() => {
