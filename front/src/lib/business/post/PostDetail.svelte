@@ -65,7 +65,7 @@
           toastUiEditor.toggleFullScreen();
         }
       }
-    }, 100);
+    }, 1500);
 
     setTimeout(() => {
       const hash = window.location.hash;
@@ -76,7 +76,7 @@
           element.scrollIntoView();
         }
       }
-    }, 200);
+    }, 2000);
 
     Post__loadLatestBody();
 
