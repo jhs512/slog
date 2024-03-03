@@ -64,6 +64,8 @@
         if (element) {
           toastUiEditor.toggleFullScreen();
         }
+      } else if (hash === '#full') {
+        toastUiEditor.toggleFullScreen();
       }
     }, 150);
 
