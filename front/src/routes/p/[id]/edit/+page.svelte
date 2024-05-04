@@ -50,8 +50,8 @@
       date: new Date().toISOString()
     });
 
-    // 배열의 크기가 50을 초과하면 가장 오래된 항목(첫 번째 항목)을 제거합니다.
-    if (posts.length > 50) {
+    // 배열의 크기가 5을 초과하면 가장 오래된 항목(첫 번째 항목)을 제거합니다.
+    if (posts.length > 5) {
       posts.shift(); // 배열의 첫 번째 항목을 제거합니다.
     }
 
