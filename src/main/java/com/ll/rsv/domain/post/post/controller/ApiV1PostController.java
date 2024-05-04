@@ -347,6 +347,8 @@ public class ApiV1PostController {
 
         postService.delete(post);
 
+        postService.flush();
+
         return RsData.of(
                 "%d번 글이 삭제되었습니다.".formatted(id)
         );

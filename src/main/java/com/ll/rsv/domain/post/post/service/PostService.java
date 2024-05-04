@@ -220,4 +220,8 @@ public class PostService {
 
         rqCache.put("likeMap", likeMap);
     }
+
+    public void flush() {
+        postRepository.flush();
+    }
 }

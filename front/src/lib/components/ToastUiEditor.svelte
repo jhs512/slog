@@ -284,6 +284,9 @@
         youtubePlugin,
         codepenPlugin
       ],
+      linkAttributes: {
+        target: '_blank'
+      },
       customHTMLRenderer: {
         heading(node: any, { entering, getChildrenText }: any) {
           return {
